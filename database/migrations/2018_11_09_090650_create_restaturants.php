@@ -3,36 +3,39 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRestaturants extends Migration
-{
+class CreateRestaturants extends Migration {
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('restaturants', function (Blueprint $table) {
+    public function up() {
+        Schema::create('restaurants', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string(' name',100);
-            $table->string('address',100);
-            $table->string('landmark',50);
-            $table->string('city',25);
-            $table->string('state',20);
-            $table->string('description',255);
-            $table->string('latitude',25);
-            $table->string('longitude',25);
+            $table->string('name', 100);
+            $table->string('phone');
+            $table->string('status');
+            $table->string('is_available');
+            $table->string('address', 100);
+            $table->string('landmark', 50);
+            $table->string('city', 25);
+            $table->string('state', 20);
+            $table->string('description', 255);
+            $table->string('latitude', 25);
+            $table->string('longitude', 25);
             $table->json('amenities');
-            $table->integer('pincode',6);
+            $table->integer('pincode', 6);
+            $table->string('taxno');
+            $table0->string('payments_terms');
             $table->string('localities');
-            $table->string('manager_name',50);
-            $table->string('manager_phone',15);
-            $table->string('owner_name',50);
-            $table->string('owner_phone',15);
+            $table->string('manager_name', 50);
+            $table->string('manager_phone', 15);
+            $table->string('owner_name', 50);
+            $table->string('owner_phone', 15);
             $table->string('updated_by');
             $table->string('created_by');
-            
         });
     }
 
@@ -41,8 +44,8 @@ class CreateRestaturants extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('restaturants');
     }
+
 }

@@ -23,8 +23,8 @@ class CreateMenus extends Migration {
             $table->date('effective_from');
             $table->date('discontinued_on');
             $table->string('menu_icon');
-            $table->unsignedInteger('restaturant_id');
-            $table->foreign('restaturant_id')->references('id')->on('restaturants');
+            $table->unsignedInteger('restaurant_id');
+            $table->foreign('restaurant_id')->references('id')->on('restaurants');
         });
     }
 
