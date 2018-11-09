@@ -14,6 +14,7 @@ class CreateMenuitemsTable extends Migration
     {
         Schema::create('menuitems', function (Blueprint $table) {
             $table->increments('id');
+            $table->timestamps();
             $table->string('item_name',100);
             $table->string('item_image',100);
             $table->string('itemtype',50);
@@ -27,7 +28,6 @@ class CreateMenuitemsTable extends Migration
             $table->string('status');
             $table->boolean('soldout');
             $table->unsignedInteger('menu_id');
-            $table->timestamps();
             $table->foreign('menu_id')->references('id')->on('menus');
         });
     }

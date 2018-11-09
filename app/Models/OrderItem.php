@@ -15,7 +15,7 @@ class OrderItem extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'order_items';
+    protected $table = 'orderitems';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];

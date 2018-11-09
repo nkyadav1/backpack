@@ -8,7 +8,7 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\RestaturantRequest as StoreRequest;
 use App\Http\Requests\RestaturantRequest as UpdateRequest;
 
-class RestaturantCrudController extends CrudController
+class RestaurantCrudController extends CrudController
 {
     public function setup()
     {

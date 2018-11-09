@@ -15,7 +15,7 @@ class SubItem extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'sub_items';
+    protected $table = 'subitems';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];

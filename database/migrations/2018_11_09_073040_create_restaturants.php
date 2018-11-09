@@ -16,7 +16,7 @@ class CreateRestaturants extends Migration {
             $table->timestamps();
             $table->string('name', 100);
             $table->string('phone');
-            $table->string('status');
+            $table->string('status',50);
             $table->string('is_available');
             $table->string('address', 100);
             $table->string('landmark', 50);
@@ -26,14 +26,14 @@ class CreateRestaturants extends Migration {
             $table->string('latitude', 25);
             $table->string('longitude', 25);
             $table->json('amenities');
-            $table->integer('pincode', 6);
             $table->string('taxno');
-            $table0->string('payments_terms');
+            $table->string('payments_terms');
             $table->string('localities');
             $table->string('manager_name', 50);
             $table->string('manager_phone', 15);
             $table->string('owner_name', 50);
             $table->string('owner_phone', 15);
+            $table->integer('pincode');
             $table->string('updated_by');
             $table->string('created_by');
         });
