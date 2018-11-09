@@ -20,7 +20,7 @@ class RestaurantUserMapCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\RestaurantUserMap');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/restaurantusermap');
-        $this->crud->setEntityNameStrings('restaurantusermap', 'restaurant_user_maps');
+        $this->crud->setEntityNameStrings('restaurantusermap', 'Restaurant User Maps');
 
         /*
         |--------------------------------------------------------------------------

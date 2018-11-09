@@ -20,7 +20,7 @@ class MenuitemCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\Menuitem');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/menuitem');
-        $this->crud->setEntityNameStrings('menuitem', 'menuitems');
+        $this->crud->setEntityNameStrings('menuitem', 'Menu Items');
 
         /*
         |--------------------------------------------------------------------------

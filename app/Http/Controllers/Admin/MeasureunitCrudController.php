@@ -20,7 +20,7 @@ class MeasureunitCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\Measureunit');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/measureunit');
-        $this->crud->setEntityNameStrings('measureunit', 'measureunits');
+        $this->crud->setEntityNameStrings('measureunit', 'Measureunits');
 
         /*
         |--------------------------------------------------------------------------

@@ -20,7 +20,7 @@ class SubItemCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\SubItem');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/subitem');
-        $this->crud->setEntityNameStrings('subitem', 'sub_items');
+        $this->crud->setEntityNameStrings('subitem', 'Sub Items');
 
         /*
         |--------------------------------------------------------------------------

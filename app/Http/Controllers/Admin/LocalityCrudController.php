@@ -20,7 +20,7 @@ class LocalityCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\Locality');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/locality');
-        $this->crud->setEntityNameStrings('locality', 'localities');
+        $this->crud->setEntityNameStrings('locality', 'Localities');
 
         /*
         |--------------------------------------------------------------------------

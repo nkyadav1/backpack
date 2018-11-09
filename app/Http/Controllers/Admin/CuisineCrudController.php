@@ -20,7 +20,7 @@ class CuisineCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\Cuisine');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/cuisine');
-        $this->crud->setEntityNameStrings('cuisine', 'cuisines');
+        $this->crud->setEntityNameStrings('cuisine', 'Cuisines');
 
         /*
         |--------------------------------------------------------------------------

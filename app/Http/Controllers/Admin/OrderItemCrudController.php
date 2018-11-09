@@ -20,7 +20,7 @@ class OrderItemCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\OrderItem');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/orderitem');
-        $this->crud->setEntityNameStrings('orderitem', 'order_items');
+        $this->crud->setEntityNameStrings('orderitem', 'order Items');
 
         /*
         |--------------------------------------------------------------------------

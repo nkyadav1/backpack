@@ -20,7 +20,7 @@ class RestaurantCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\Restaurant');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/restaurant');
-        $this->crud->setEntityNameStrings('restaturant', 'restaturants');
+        $this->crud->setEntityNameStrings('restaurant', 'Restaurants');
 
         /*
         |--------------------------------------------------------------------------

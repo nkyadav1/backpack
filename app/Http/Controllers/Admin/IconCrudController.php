@@ -19,7 +19,7 @@ class IconCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\Icon');
         $this->crud->setRoute(config('backpack.base.route_prefix').'/icon');
-        $this->crud->setEntityNameStrings('icon', 'icons');
+        $this->crud->setEntityNameStrings('icon', 'Icons');
 
         /*
         |--------------------------------------------------------------------------

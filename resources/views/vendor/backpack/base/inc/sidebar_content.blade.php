@@ -50,4 +50,4 @@
 <li><a href='{{ backpack_url('subitem') }}'><i class='fa fa-subitem'></i> <span>Sub Items</span></a></li>
 <li><a href='{{ backpack_url('menu') }}'><i class='fa fa-menu'></i> <span>Menu</span></a></li>
 <li><a href='{{ backpack_url('orderitem') }}'><i class='fa fa-orderitem'></i> <span>Order Items</span></a></li>
-<li><a href='{{ backpack_url('restaturant') }}'><i class='fa fa-restaturant'></i> <span>Restaturants</span></a></li>
+<li><a href='{{ backpack_url('restaurant') }}'><i class='fa fa-restaturant'></i> <span>Restaurants</span></a></li>

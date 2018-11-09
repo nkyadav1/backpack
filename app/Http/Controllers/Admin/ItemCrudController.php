@@ -20,7 +20,7 @@ class ItemCrudController extends CrudController
         */
         $this->crud->setModel('App\Models\Item');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/item');
-        $this->crud->setEntityNameStrings('item', 'items');
+        $this->crud->setEntityNameStrings('item', 'Items');
 
         /*
         |--------------------------------------------------------------------------
