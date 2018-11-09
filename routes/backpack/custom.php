@@ -31,3 +31,4 @@ Route::group([
     CRUD::resource('orderitem', 'OrderItemCrudController');
     CRUD::resource('restaturants', 'RestaturantCrudController');
 }); // this should be the absolute last line of this file
+    CRUD::resource('restaurantusermap', 'RestaurantUserMapCrudController');
