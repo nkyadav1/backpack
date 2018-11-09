@@ -41,3 +41,8 @@
     </ul>
 </li>
 <li><a href='{{ backpack_url('cuisine') }}'><i class='fa fa-tag'></i> <span>Cuisines</span></a></li>
+<li><a href='{{ backpack_url('amenity') }}'><i class='fa fa-tag'></i> <span>Amenities</span></a></li>
+<li><a href='{{ backpack_url('locality') }}'><i class='fa fa-location-arrow'></i> <span>Localities</span></a></li>
+<li><a href='{{ backpack_url('measureunit') }}'><i class='fa fa-location-arrow'></i> <span>Measureunits</span></a></li>
+<li><a href='{{ backpack_url('menuitem') }}'><i class='fa fa-location-arrow'></i> <span>Menu Items</span></a></li>
+<li><a href='{{ backpack_url('order') }}'><i class='fa fa-location-arrow'></i> <span>Orders</span></a></li>
