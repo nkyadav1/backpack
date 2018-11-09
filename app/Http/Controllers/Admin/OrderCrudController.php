@@ -8,7 +8,7 @@ use Backpack\CRUD\app\Http\Controllers\CrudController;
 use App\Http\Requests\OrdersRequest as StoreRequest;
 use App\Http\Requests\OrdersRequest as UpdateRequest;
 
-class OrdersCrudController extends CrudController
+class OrderCrudController extends CrudController
 {
     public function setup()
     {
@@ -18,9 +18,9 @@ class OrdersCrudController extends CrudController
         | BASIC CRUD INFORMATION
         |--------------------------------------------------------------------------
         */
-        $this->crud->setModel('App\Models\Orders');
-        $this->crud->setRoute(config('backpack.base.route_prefix') . '/orders');
-        $this->crud->setEntityNameStrings('orders', 'orders');
+        $this->crud->setModel('App\Models\Order');
+        $this->crud->setRoute(config('backpack.base.route_prefix') . '/order');
+        $this->crud->setEntityNameStrings('order', 'orders');
 
         /*
         |--------------------------------------------------------------------------

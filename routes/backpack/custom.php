@@ -24,7 +24,7 @@ Route::group([
     CRUD::resource('locality', 'LocalityCrudController');
     CRUD::resource('measureunit', 'MeasureunitCrudController');
     CRUD::resource('menuitem', 'MenuItemCrudController');
-    CRUD::resource('orders', 'OrderCrudController');
+    CRUD::resource('order', 'OrderCrudController');
     CRUD::resource('item', 'ItemCrudController');
     CRUD::resource('subitem', 'SubItemCrudController');
     CRUD::resource('menu', 'MenuCrudController');
