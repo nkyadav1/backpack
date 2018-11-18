@@ -51,3 +51,6 @@
 <li><a href='{{ backpack_url('menu') }}'><i class='fa fa-menu'></i> <span>Menu</span></a></li>
 <li><a href='{{ backpack_url('orderitem') }}'><i class='fa fa-orderitem'></i> <span>Order Items</span></a></li>
 <li><a href='{{ backpack_url('restaurant') }}'><i class='fa fa-restaturant'></i> <span>Restaurants</span></a></li>
+
+<li><a href='{{ backpack_url('city') }}'><i class='fa fa-building'></i> <span>City</span></a></li>
+<li><a href='{{ backpack_url('state') }}'><i class='fa fa-building'></i> <span>State</span></a></li>

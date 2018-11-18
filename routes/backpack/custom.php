@@ -10,17 +10,36 @@ Route::get('api/article', 'App\Http\Controllers\Api\ArticleController@index');
 Route::get('api/article-search', 'App\Http\Controllers\Api\ArticleController@search');
 Route::get('api/article/{id}', 'App\Http\Controllers\Api\ArticleController@show');
 
+
+/* * **********************************************
+ * City and State API Routes
+ * ********************************************** */
 Route::group([
-    'prefix'     => config('backpack.base.route_prefix', 'admin'),
+    'prefix' => 'api',
+    //'middleware' => ['web'],
+    'namespace' => 'App\Http\Controllers\Api',
+        ], function () {
+    Route::get('/city', 'CityController@index');
+    Route::get('/city-search', 'CityController@search');
+    Route::get('city/{id}', 'CityController@show');
+
+
+    Route::get('/state', 'StateController@index');
+    Route::get('/state-search', 'StateController@search');
+    Route::get('state/{id}', 'StateController@show');
+});
+
+Route::group([
+    'prefix' => config('backpack.base.route_prefix', 'admin'),
     'middleware' => ['web', config('backpack.base.middleware_key', 'admin')],
-    'namespace'  => 'App\Http\Controllers\Admin',
-], function () { // custom admin routes
+    'namespace' => 'App\Http\Controllers\Admin',
+        ], function () { // custom admin routes
     // CRUD resources and other admin routes
     CRUD::resource('monster', 'MonsterCrudController');
     CRUD::resource('icon', 'IconCrudController');
     CRUD::resource('product', 'ProductCrudController');
-    CRUD::resource('cuisine','CuisineCrudController');
-    CRUD::resource('amenity','AmenityCrudController');
+    CRUD::resource('cuisine', 'CuisineCrudController');
+    CRUD::resource('amenity', 'AmenityCrudController');
     CRUD::resource('locality', 'LocalityCrudController');
     CRUD::resource('measureunit', 'MeasureunitCrudController');
     CRUD::resource('menuitem', 'MenuItemCrudController');
@@ -31,4 +50,6 @@ Route::group([
     CRUD::resource('orderitem', 'OrderItemCrudController');
     CRUD::resource('restaurant', 'RestaurantCrudController');
     CRUD::resource('restaurantusermap', 'RestaurantUserMapCrudController');
+    CRUD::resource('city', 'CityCrudController');
+    CRUD::resource('state', 'StateCrudController');
 }); // this should be the absolute last line of this file

@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\CrudTrait;
 
-class Restaurant extends Model
+class City extends Model
 {
     use CrudTrait;
 
@@ -15,12 +15,11 @@ class Restaurant extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'restaurants';
+    protected $table = 'cities';
     // protected $primaryKey = 'id';
-    // 
     // public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ['name', 'phone', 'status', 'is_available', 'address', 'landmark', 'city', 'state', 'description', 'latitude', 'longitude', 'amenities', 'taxno', 'payments_terms', 'localities', 'manager_name', 'manager_phone', 'owner_name', 'owner_phone', 'pincode'];
+    protected $fillable = ['name','state'];
     // protected $hidden = [];
     // protected $dates = [];
 
