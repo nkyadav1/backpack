@@ -100,15 +100,13 @@ class RestaurantCrudController extends CrudController {
                 'placeholder' => "Select a City", // placeholder for the select
                 'minimum_input_length' => 2, // minimum characters to type before querying results
             ],
-            "state" => [
-                "name" => "state",
-                "label" => "State",
-                "value" => null,
-                "default" => null,
-                "type" => "text",
-                "values" => [],
-                "attributes" => [],
-                "autoset" => true
+            [// Select2
+                'label' => "State",
+                'type' => 'select2',
+                'name' => 'id', // the db column for the foreign key
+                'entity' => 'state', // the method that defines the relationship in your Model
+                'attribute' => 'name', // foreign key attribute that is shown to user
+                'model' => "App\Models\State" // foreign key model
             ],
             "description" => [
                 "name" => "description",
@@ -170,15 +168,16 @@ class RestaurantCrudController extends CrudController {
                 "attributes" => [],
                 "autoset" => true
             ],
-            "localities" => [
-                "name" => "localities",
-                "label" => "Localities",
-                "value" => null,
-                "default" => null,
-                "type" => "text",
-                "values" => [],
-                "attributes" => [],
-                "autoset" => true
+            "localities" => [// 1-n relationship
+                'label' => "Localities", // Table column heading
+                'type' => "select2_from_ajax",
+                'name' => 'id', // the column that contains the ID of that connected entity
+                'entity' => 'locality', // the method that defines the relationship in your Model
+                'attribute' => "name", // foreign key attribute that is shown to user
+                'model' => "App\Models\Locality", // foreign key model
+                'data_source' => url("api/locality"), // url to controller search function (with /{id} should return model)
+                'placeholder' => "Select a Locality", // placeholder for the select
+                'minimum_input_length' => 2, // minimum characters to type before querying results
             ],
             "manager_name" => [
                 "name" => "manager_name",

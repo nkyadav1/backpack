@@ -27,6 +27,10 @@ Route::group([
     Route::get('/state', 'StateController@index');
     Route::get('/state-search', 'StateController@search');
     Route::get('state/{id}', 'StateController@show');
+    
+    Route::get('/locality', 'LocalityController@index');
+    Route::get('/locality-search', 'LocalityController@search');
+    Route::get('locality/{id}', 'LocalityController@show');
 });
 
 Route::group([
