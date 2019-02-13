@@ -286,8 +286,7 @@ jQuery(function($) {
 	 */
 
 	var $modal = $('#ajaxLoginModal');
-
-	$(document).on('click', '.btn-ajax-login,.login-box-box-action a' ,function(){
+        $(document).on('click', '.btn-ajax-login,.login-box-box-action a' ,function(){
 		// create the backdrop and wait for next modal to be triggered
 		
 		$modalForgotPassword.modal('hide');
@@ -296,7 +295,7 @@ jQuery(function($) {
 		$('body').modalmanager('loading');
 
 		setTimeout(function(){
-			 $modal.load('ajax-login-modal-login.html', '', function(){
+			 $modal.load(base_url+'/user/login', '', function(){
 				$modal.modal();
 			});
 		}, 1000);
@@ -314,7 +313,7 @@ jQuery(function($) {
 		$('body').modalmanager('loading');
 
 		setTimeout(function(){
-			 $modalRegister.load('ajax-login-modal-register.html', '', function(){
+			 $modalRegister.load(base_url+'/user/register', '', function(){
 				$modalRegister.modal();
 			});
 		}, 1000);
@@ -333,7 +332,7 @@ jQuery(function($) {
 
 		setTimeout(function(){
 
-			 $modalForgotPassword.load('ajax-login-modal-forgot-password.html', '', function(){
+			 $modalForgotPassword.load(base_url+'/user/forgot-password', '', function(){
 				$modalForgotPassword.modal();
 			});
 

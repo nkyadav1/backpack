@@ -153,6 +153,9 @@
 
 
         <!-- JS -->
+        <script type="text/javascript">
+            var base_url = "{{url('/')}}";
+        </script>
         <script type="text/javascript" src="{{url('/')}}/js/SmoothScroll.min.js"></script>
         <script type="text/javascript" src="{{url('/')}}/js/jquery.waypoints.min.js"></script>
         <script type="text/javascript" src="{{url('/')}}/js/jquery.easing.1.3.js"></script>

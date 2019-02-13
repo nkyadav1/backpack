@@ -36,3 +36,15 @@ Route::get('/contact-us', function () {
 Route::get('/join-us', function () {
     return view('restaurant-submit');
 });
+
+Route::get('user/register', function () {
+    return view('ajax-login-modal-register');
+});
+
+Route::get('user/login', function () {
+    return view('ajax-login-modal-login');
+});
+
+Route::get('user/forgot-password', function () {
+    return view('ajax-login-modal-forgot-password');
+});
