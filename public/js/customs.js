@@ -340,6 +340,16 @@ jQuery(function($) {
 
 	});
 	
+        $("#login-form").submit(function(event){
+            console.log('here');
+            event.preventDefault();
+            var $form = $(this);
+            var url = $form.attr('data-actionurl');
+            var formData = $form.serialize();
+            $.post(url,formData,function(data,textStatus,jqxhr){
+                console.log(data);
+            });
+        });
 	
 	// JS init calling
 	initSlider();
@@ -390,4 +400,19 @@ function initSlider(){
 		pauseOnHover: true,
 	});
 	
+}
+
+function simpleAjaxCall(url,data,method='post',contenttype='application/x-www-form-urlencoded'){
+    $.ajax({
+            type: method,
+            url: url,
+            data: data,
+            contentType:contenttype,
+            success: function(responseData, textStatus, jqXHR) {
+                responseData
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown);
+            }
+        });
 }

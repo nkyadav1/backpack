@@ -1,3 +1,5 @@
+<form id="login-form" action="javascript:;" name="login-form" data-actionurl="{{url('/login')}}" method="post">
+    @csrf
 <div class="modal-header">
 	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 	<h4 class="modal-title text-center">Sign-in into your account</h4>
@@ -56,6 +58,7 @@
 
 
 <div class="modal-footer text-center">
-	<button type="button" class="btn btn-primary">Log-in</button>
+	<button type="submit" class="btn btn-primary">Log-in</button>
 	<button type="button" data-dismiss="modal" class="btn btn-dark">Close</button>
 </div>
+</form>
