@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/restaurants/list', function () {
     return view('restaurant-result-list');
@@ -48,3 +48,5 @@ Route::get('user/login', function () {
 Route::get('user/forgot-password', function () {
     return view('ajax-login-modal-forgot-password');
 });
+Auth::routes();
+
