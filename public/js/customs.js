@@ -417,19 +417,11 @@ function simpleAjaxCall(url,data,method='post',contenttype='application/x-www-fo
 
 function loadRestaurantList(){
     	/** for Restaurant list view */
-	var $restaurantContainer = $('restaurant-list-wrapper');
-
-		//$modal.modal('hide');
-		//$modalForgotPassword.modal('hide');
-
-		$('.restaurant-list-item-wrapper').modalmanager('loading');
-
-		setTimeout(function(){
+	var $restaurantContainer = $('#restaurant-list-wrapper');
+		$('#restaurant-list-wrapper').modalmanager('loading');
+                setTimeout(function(){
 			 $restaurantContainer.load(base_url+'/api/restaurants/list', '', function(){
     				//$modalRegister.modal();
 			});
-		}, 1000);
-	
-
-    
+		}, 1000);    
 }
