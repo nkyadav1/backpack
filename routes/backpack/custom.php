@@ -31,6 +31,11 @@ Route::group([
     Route::get('/locality', 'LocalityController@index');
     Route::get('/locality-search', 'LocalityController@search');
     Route::get('locality/{id}', 'LocalityController@show');
+    
+    Route::get('/restaurant', 'RestaurantController@index');
+    Route::get('/restaurant-search', 'RestaurantController@search');
+    Route::get('restaurant/{id}', 'RestaurantController@show');
+    Route::get('restaurants/{view}', 'RestaurantController@showList');
 });
 
 Route::group([

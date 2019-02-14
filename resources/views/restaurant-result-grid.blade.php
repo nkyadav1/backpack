@@ -4,16 +4,12 @@
 		
 			<!-- start hero-header -->
 			<div class="hero hero-sm" style="background-image:url({{url('/')}}'/images/hero-header/02.jpg');">
-				<div class="container">
-					
-					<div class="home-search-form">
-					
-						<form>
-						
+				<div class="container">					
+					<div class="home-search-form">					
+						<form>						
 							<div class="form-group location-form">
 								<input type="text" class="form-control" placeholder="Where would you like to eat?">
-							</div>
-							
+							</div>							
 							<div class="form-group">
 								<select class="custom-select" id="cuisine-type">
 									<option value="0">Cuisine Type</option>
@@ -24,8 +20,7 @@
 									<option value="5">Indochinese‎</option>
 									<option value="6">Halal</option>
 								</select>
-							</div>
-							
+							</div>							
 							<div class="form-group">
 								<select class="custom-select" id="no-of-people">
 									<option value="0">Number Of People</option>
@@ -65,8 +60,7 @@
 					
 						<div class="section-title-02">
 
-							<h3><span>Restaurant in Bangkok <small class="ml-10">/ 253 restaurants</small></span></h3>
-						
+							<h3><span>Restaurant in {{city}} <small class="ml-10">&nbsp;</small></span></h3>						
 						</div>
 					
 					</div>

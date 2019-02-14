@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Title Of Site -->
-        <title>Royal Zayka</title>
+        <title>Laravel</title>
         <meta name="description" content="Book your restaurant from anywhere, Fastest growing table booking app. Now dine out is super easy with Royal Zayaka." />
         <meta name="keywords" content="restaurant, dinner, lunch, eat, food, rice, dine, menu, dining, meal, cafe, breakfast, Dine-Out, Dine-In, Restaurant Booking, Table Booking" />
         <meta name="author" content="Royal Zayaka">
@@ -80,7 +80,7 @@
                                     <li><a href="tel:6376470147"><i class="fa fa-phone-square green">&nbsp;</i>6376 470 147</a></li>
                                     <li class="dropdown bt-dropdown-click">
                                         <a id="city-dropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                            <i class="ion-android-globe"></i> Neemuch
+                                            <i class="ion-android-globe"></i><span id="selected-city">Neemuch</span>
                                             <span class="caret"></span>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="city-dropdown">
