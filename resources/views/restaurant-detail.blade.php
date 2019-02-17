@@ -1054,10 +1054,142 @@
 									
 <!--										<a href="restuarant-review.html" class="btn btn-primary">Read more full review</a>-->
 										
-										<a href="#review-form" class="btn btn-primary">Write Your Review</a>
+										<button class="btn btn-primary btn-block btn-toggle collapsed btn-hidden btn-sm mt-1" data-toggle="collapse" data-target="#change-search">Write your review</button>
 								
 									</div>
-									
+									<div id="change-search" class="collapse"> 
+													
+											<div class="review-form-wrapper mt-30">											
+												<h4>Leave Your Review</h4>									
+                                                                                                <form id="review-form" class="clearfix" action="{{url('/review')}}" method="post">
+                                                                                                    @csrf
+													<div class="row gap-20">													
+														<div class="col-xs-12 col-sm-6 col-md-6">														
+															<div class="form-group">
+																<label>Your Name: </label>
+																<input type="text" class="form-control" name="name"/>
+															</div>
+														
+														</div>
+														
+														<div class="col-xs-12 col-sm-6 col-md-6">
+														
+															<div class="form-group">
+																<label>Your Email Address: </label>
+																<input type="email" class="form-control" name="email"/>
+															</div>
+														
+														</div>
+														
+													</div>
+													
+													<div class="col-5-wrapper col-3-wrapper-sm col-2-wrapper-xss gap-20">
+														
+														<div>
+														
+															<div class="form-group">
+															
+																<label>Food: </label>
+																
+																<div class="rating-wrapper">
+																	<div class="rating-item">
+																		<input type="hidden" class="rating-label" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="2" value="0" name="food_rating" />
+																	</div>
+																</div>
+																
+															</div>
+														
+														</div>
+														
+														<div>
+														
+															<div class="form-group">
+															
+																<label>Service: </label>
+																
+																<div class="rating-wrapper">
+																	<div class="rating-item">
+																		<input type="hidden" class="rating-label" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="2" value="0" name="service_rating"/>
+																	</div>
+																</div>
+																
+															</div>
+														
+														</div>
+														
+														<div>
+														
+															<div class="form-group">
+															
+																<label>Recommend: </label>
+																
+																<div class="rating-wrapper">
+																	<div class="rating-item">
+																		<input type="hidden" class="rating-label" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="2" value="0" name="recommand_rating"/>
+																	</div>
+																</div>
+																
+															</div>
+														
+														</div>
+														
+														<div>
+														
+															<div class="form-group">
+															
+																<label>Worth: </label>
+																
+																<div class="rating-wrapper">
+																	<div class="rating-item">
+																		<input type="hidden" class="rating-label" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="2" value="0" name="worth_rating"/>
+																	</div>
+																</div>
+																
+															</div>
+														
+														</div>
+														
+<!--														<div>
+														
+															<div class="form-group">
+															
+																<label>Instructor: </label>
+																
+																<div class="rating-wrapper">
+																	<div class="rating-item">
+																		<input type="hidden" class="rating-label" data-filled="fa fa-star" data-empty="fa fa-star-o" data-fractions="2" value="0" />
+																	</div>
+																</div>
+																
+															</div>
+														
+														</div>-->
+														
+													</div>
+													
+													<div class="row gap-20">
+
+														<div class="col-xs-12 col-sm-12 col-md-12">
+														
+															<div class="form-group">
+																<label>Your Message: </label>
+                                                                                                                                <textarea class="form-control form-control-sm" rows="5" name="remarks"></textarea>
+															</div>
+														</div>
+														
+														<div class="clear"></div>
+														
+														<div class="col-xs-12 col-sm-12 col-md-12">
+                                                                                                                    <button type="submit" class="btn btn-primary btn-sm mt-5">Submit</button>
+															<span class="btn btn-primary btn-inverse btn-toggle btn-sm mt-5" data-toggle="collapse" data-target="#change-search">Cancel</span>
+														</div>
+														
+													</div>
+												
+												</form>
+											
+											</div>
+										</div>
 								</div>
 								
 								<div class="clear mb-15"></div>

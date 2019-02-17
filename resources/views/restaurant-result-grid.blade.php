@@ -3,7 +3,7 @@
 		<div class="main-wrapper scrollspy-container">
 		
 			<!-- start hero-header -->
-			<div class="hero hero-sm" style="background-image:url({{url('/')}}'/images/hero-header/02.jpg');">
+			<div class="hero hero-sm" style="background-image:url('{{url('/')}}/images/hero-header/02.jpg');">
 				<div class="container">					
 					<div class="home-search-form">					
 						<form>						
@@ -60,7 +60,7 @@
 					
 						<div class="section-title-02">
 
-							<h3><span>Restaurant in {{city}} <small class="ml-10">&nbsp;</small></span></h3>						
+							<h3><span>Restaurant Near You <small class="ml-10">&nbsp;</small></span></h3>						
 						</div>
 					
 					</div>
