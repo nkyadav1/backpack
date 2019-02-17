@@ -4,7 +4,7 @@
 		
 			<!-- start hero-header -->
 			<div class="hero hero-sm" style="background-image:url('{{url('/')}}/images/hero-header/02.jpg');">
-				<div class="container">
+<!--				<div class="container">
 					
 					<div class="home-search-form">
 					
@@ -44,7 +44,7 @@
 						
 					</div>
 
-				</div>
+				</div>-->
 				
 			</div>
 			<!-- end hero-header -->
@@ -53,8 +53,8 @@
 			
 				<div class="breadcrumb-wrapper">
 					<ol class="breadcrumb">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Page</a></li>
+						<li><a href="{{ url('/') }}">Home</a></li>
+						<li><a href="{{url('/resturants/list')}}">Restaurants</a></li>
 						<li class="active">Feature Items</li>
 					</ol>
 				</div>
@@ -64,9 +64,7 @@
 					<div class="col-md-8">
 					
 						<div class="section-title-02">
-
-							<h3><span>Restaurant in Bangkok <small class="ml-10">/ 253 restaurants</small></span></h3>
-						
+							<h3><span>Restaurants near you <!--<small class="ml-10">/ 253 restaurants</small>--></span></h3>						
 						</div>
 					
 					</div>
@@ -75,7 +73,7 @@
 						
 				<div class="row">
 				
-					<div class="col-sm-4 col-md-3">
+<!--					<div class="col-sm-4 col-md-3">
 					
 						<div class="section-title-02">
 							<h4><span>Filter Your Result</span></h4>
@@ -216,7 +214,7 @@
 							<p>Attachment apartments in delightful by motionless it no. And now she burst sir learn total. Hearing hearted shewing own ask. Solicitude uncommonly use her motionless not collecting age. The properly servants required mistaken outlived bed and.</p>
 						</div>
 						
-					</div>
+					</div>-->
 					
 					<div class="col-sm-8 col-md-9">
 						

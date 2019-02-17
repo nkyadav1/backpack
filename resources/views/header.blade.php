@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Title Of Site -->
-        <title>Laravel</title>
+        <title>Royal Jayka</title>
         <meta name="description" content="Book your restaurant from anywhere, Fastest growing table booking app. Now dine out is super easy with Royal Zayaka." />
         <meta name="keywords" content="restaurant, dinner, lunch, eat, food, rice, dine, menu, dining, meal, cafe, breakfast, Dine-Out, Dine-In, Restaurant Booking, Table Booking" />
         <meta name="author" content="Royal Zayaka">
@@ -78,7 +78,7 @@
                             <div class="navbar-mini">
                                 <ul class="clearfix">
                                     <li><a href="tel:6376470147"><i class="fa fa-phone-square green">&nbsp;</i>6376 470 147</a></li>
-                                    <li class="dropdown bt-dropdown-click">
+<!--                                    <li class="dropdown bt-dropdown-click">
                                         <a id="city-dropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                             <i class="ion-android-globe"></i><span id="selected-city">Neemuch</span>
                                             <span class="caret"></span>
@@ -88,7 +88,7 @@
                                             <li><a href="javascript::setCity('Neemuch');">Neemuch</a></li>
                                             <li><a href="javascript:setCity('Udaipur');">Udaipur</a></li>
                                         </ul>
-                                    </li>
+                                    </li>-->
                                     <li class="user-action">
                                         <a href="javascript:void(0)" class="btn btn-primary btn-inverse btn-sm btn-ajax-login" data-toggle="modal">Sign up/in</a>
                                     </li>

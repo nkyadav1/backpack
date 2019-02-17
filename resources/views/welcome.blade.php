@@ -5,31 +5,17 @@
                 <!-- start hero-header -->
                 <div class="hero text-center alt-height" style="background-image:url('images/hero-header/01.jpg');">
                     <div class="container">
-
                         <div class="row">
-
                             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-
-                                <h1>Find the best restaurants at the best price</h1>
-                                <p>More than 20,000 restaurants all around the world and in your country or city</p>
-
-                                <div class="home-search-form home-search-form-center">
-
+                                <h1>Find the best restaurants around you.</h1>
+<!--                                <p>More than 20,000 restaurants all around the world and in your country or city</p>-->
+<!--                                <div class="home-search-form home-search-form-center">
                                     <form>
-
                                         <div class="form-group location-form">
                                             <input type="text" class="form-control" placeholder="Where would you like to eat?">
                                         </div>
-
                                         <div class="form-group">
-                                            <select class="custom-select" id="cuisine-type">
-                                                <option value="0">Cuisine Type</option>
-                                                <option value="1">African</option>
-                                                <option value="2">American‎</option>
-                                                <option value="3">Italian</option>
-                                                <option value="4">French</option>
-                                                <option value="5">Indochinese‎</option>
-                                                <option value="6">Halal</option>
+                                            <select class="form-control custom-select" id="cuisine-type" style="background-color:#ffffff !important;">                                                
                                             </select>
                                         </div>
 
@@ -45,7 +31,7 @@
                                             </select>
                                         </div>
 
-                                        <button class="btn btn-primary btn-form">Find a Table</button>
+-->                                        <a href="{{url('/restaurants/list')}}"><button class="btn btn-primary btn-form">Find a Table</button></a><!--
 
                                     </form>
 
@@ -53,7 +39,7 @@
 
                                     <p class="around-you"><a href="#">Or view all 360 restaurants in and/or around your current city</a></p>
 
-                                </div>
+                                </div>-->
 
                             </div>
 
@@ -98,8 +84,8 @@
                                                     <img src="images/hot-item/01.jpg" alt="Hot Item">
                                                 </div>
                                                 <div class="content">
-                                                    <h4><span>Bangkok</span></h4>
-                                                    <span>435 restaurants</span>
+                                                    <h4><span>Chhoti Sadri</span></h4>
+<!--                                                    <span>435 restaurants</span>-->
                                                 </div>
                                             </a>
                                         </div>
@@ -114,24 +100,8 @@
                                                     <img src="images/hot-item/02.jpg" alt="Hot Item">
                                                 </div>
                                                 <div class="content">
-                                                    <h4><span>Kuala Lumpur</span></h4>
-                                                    <span>188 restaurants</span>
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="GridLex-col-3_sm-6_xs-6_xss-12">
-
-                                        <div class="destination-grid-item-02">
-                                            <a href="#">
-                                                <div class="image">
-                                                    <img src="images/hot-item/03.jpg" alt="Hot Item">
-                                                </div>
-                                                <div class="content">
-                                                    <h4><span>Pattaya</span></h4>
-                                                    <span>125 restaurants</span>
+                                                    <h4><span>Mandsaur</span></h4>
+<!--                                                    <span>188 restaurants</span>-->
                                                 </div>
                                             </a>
                                         </div>
@@ -146,8 +116,23 @@
                                                     <img src="images/hot-item/04.jpg" alt="Hot Item">
                                                 </div>
                                                 <div class="content">
-                                                    <h4><span>Penang</span></h4>
-                                                    <span>89 restaurants</span>
+                                                    <h4><span>Udaipur</span></h4>
+<!--                                                    <span>125 restaurants</span>-->
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="GridLex-col-3_sm-6_xs-6_xss-12">
+                                        <div class="destination-grid-item-02">
+                                            <a href="#">
+                                                <div class="image">
+                                                    <img src="images/hot-item/03.jpg" alt="Hot Item">
+                                                </div>
+                                                <div class="content">
+                                                    <h4><span>Coming Soon</span></h4>
+<!--                                                    <span>89 restaurants</span>-->
                                                 </div>
                                             </a>
                                         </div>
@@ -496,4 +481,23 @@
 
             </div>
             <!-- end Main Wrapper -->
+            <script type="text/javascript">
+            $(document).ready(function(){
+                $('#cuisine-type').select2({
+  ajax: {
+    url: 'https://api.github.com/search/repositories',
+    data: function (params) {
+      var query = {
+        search: params.term,
+        page: params.page || 1
+      }
+
+      // Query parameters will be ?search=[term]&page=[page]
+      return query;
+    }
+  }
+});
+            });                
+            
+            </script>
 @include('footer')

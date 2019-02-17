@@ -48,7 +48,14 @@ Route::get('user/login', function () {
 Route::get('user/forgot-password', function () {
     return view('ajax-login-modal-forgot-password');
 });
-Auth::routes();
+
+Route::group([
+    'prefix' => '/',
+    //'middleware' => ['web'],
+    'namespace' => 'Api',
+        ], function () {
+    Route::get('restaurant/{id}', 'RestaurantController@detailView'); 
+});
 
 
 Auth::routes();

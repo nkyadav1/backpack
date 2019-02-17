@@ -42,6 +42,12 @@ class RestaurantController extends Controller
         } else {
             $results = Restaurant::paginate(10);
         }
-        return view('ajax-restaurant-list')->with('results',$results);
+        return view('ajax-restaurant-list')->with('results',$results->toArray());
+    }
+    
+    public function detailView($id)
+    {
+        $data = $this->show($id);
+        return view('restaurant-detail')->with('data',$data);
     }
 }

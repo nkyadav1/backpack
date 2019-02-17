@@ -100,7 +100,7 @@ class RestaurantCrudController extends CrudController {
                 'placeholder' => "Select a City", // placeholder for the select
                 'minimum_input_length' => 2, // minimum characters to type before querying results
             ],
-            [// Select2
+            "state"=>[// Select2
                 'label' => "State",
                 'type' => 'select2',
                 'name' => 'id', // the db column for the foreign key
@@ -147,6 +147,17 @@ class RestaurantCrudController extends CrudController {
                 "values" => [],
                 "attributes" => [],
                 "autoset" => true
+            ],
+            "cuisine" => [// 1-n relationship
+                'label' => "Cuisines", // Table column heading
+                'type' => "select2_from_ajax",
+                'name' => 'id', // the column that contains the ID of that connected entity
+                'entity' => 'cuisine', // the method that defines the relationship in your Model
+                'attribute' => "name", // foreign key attribute that is shown to user
+                'model' => "App\Models\Cuisine", // foreign key model
+                'data_source' => url("api/cuisine"), // url to controller search function (with /{id} should return model)
+                'placeholder' => "Select a Cuisine", // placeholder for the select
+                'minimum_input_length' => 2, // minimum characters to type before querying results
             ],
             "taxno" => [
                 "name" => "taxno",

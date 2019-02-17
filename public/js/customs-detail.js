@@ -9,18 +9,18 @@ jQuery(function($) {
 		
 	$('#detail-food-photo').imagesGrid({
 			images: [
-					{ src: 'images/detail-food-photo/01.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption One' },
-					{ src: 'images/detail-food-photo/02.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Two' },
-					{ src: 'images/detail-food-photo/03.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Three' },
-					{ src: 'images/detail-food-photo/04.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Fpur' },
-					{ src: 'images/detail-food-photo/05.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Five' },
-					{ src: 'images/detail-food-photo/06.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Six' },
-					{ src: 'images/detail-food-photo/07.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Seven' },
-					{ src: 'images/detail-food-photo/08.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Eight' },
-					{ src: 'images/detail-food-photo/09.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Nine' },
-					{ src: 'images/detail-food-photo/10.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Ten' },
-					{ src: 'images/detail-food-photo/11.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Eleven' },
-					{ src: 'images/detail-food-photo/12.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Twelve' },
+					{ src: base_url+'/images/detail-food-photo/01.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption One' },
+					{ src: base_url+'/images/detail-food-photo/02.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Two' },
+					{ src: base_url+'/images/detail-food-photo/03.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Three' },
+					{ src: base_url+'/images/detail-food-photo/04.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Fpur' },
+					{ src: base_url+'/images/detail-food-photo/05.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Five' },
+					{ src: base_url+'/images/detail-food-photo/06.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Six' },
+					{ src: base_url+'/images/detail-food-photo/07.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Seven' },
+					{ src: base_url+'/images/detail-food-photo/08.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Eight' },
+					{ src: base_url+'/images/detail-food-photo/09.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Nine' },
+					{ src: base_url+'/images/detail-food-photo/10.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Ten' },
+					{ src: base_url+'/images/detail-food-photo/11.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Eleven' },
+					{ src: base_url+'/images/detail-food-photo/12.jpg', alt: 'Second image', title: 'Second image', caption: 'Image Caption Twelve' },
 			],
 			cells: 5,
 			align: true
@@ -67,7 +67,7 @@ function initialize() {
 		position: loc,
 		//disableDefaultUI:true,
 
-		icon:'images/map-marker/00.png',
+		icon:base_url+'/images/map-marker/00.png',
 		//pixelOffset: new google.maps.Size(-140, -100),
 		visible: true
 

@@ -22,8 +22,11 @@ Route::group([
     Route::get('/city', 'CityController@index');
     Route::get('/city-search', 'CityController@search');
     Route::get('city/{id}', 'CityController@show');
-
-
+    
+    Route::get('/cuisine', 'CuisineController@index');
+    Route::get('/cuisine-search', 'CuisineController@search');
+    Route::get('cuisine/{id}', 'CuisineController@show');
+    
     Route::get('/state', 'StateController@index');
     Route::get('/state-search', 'StateController@search');
     Route::get('state/{id}', 'StateController@show');
@@ -36,6 +39,7 @@ Route::group([
     Route::get('/restaurant-search', 'RestaurantController@search');
     Route::get('restaurant/{id}', 'RestaurantController@show');
     Route::get('restaurants/{view}', 'RestaurantController@showList');
+    
 });
 
 Route::group([

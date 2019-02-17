@@ -20,7 +20,7 @@ class Restaurant extends Model
     // 
     // public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = ['name', 'phone', 'status', 'is_available', 'address', 'landmark', 'city', 'state', 'description', 'latitude', 'longitude', 'amenities', 'taxno', 'payments_terms', 'localities', 'manager_name', 'manager_phone', 'owner_name', 'owner_phone', 'pincode'];
+    protected $fillable = ['name', 'phone', 'status', 'is_available', 'address', 'landmark', 'city', 'state', 'description', 'latitude', 'longitude', 'amenities', 'taxno', 'payments_terms', 'localities', 'manager_name', 'manager_phone', 'owner_name', 'owner_phone', 'pincode','cuisine'];
     // protected $hidden = [];
     // protected $dates = [];
 
