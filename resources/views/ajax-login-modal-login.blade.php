@@ -1,4 +1,4 @@
-<form id="login-form" action="javascript:;" name="login-form" data-actionurl="{{url('/login')}}" method="post">
+<form id="login-form" name="login-form" action="{{url('/user/login')}}" method="post">
     @csrf
 <div class="modal-header">
 	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -8,9 +8,9 @@
 <div class="modal-body">
 	<div class="row gap-20">
 	
-<!--		<div class="col-xs-12 col-md-12">
-			<button class="btn btn-facebook btn-block">sign-in with Facebook</button>
-		</div>
+		<div id="login-errors" class="col-xs-12 col-md-12">
+			
+		</div><!--
 		<div class="col-xs-12 col-md-12 mt-5">
 			<button class="btn btn-google-plus btn-block">sign-in with Google+</button>
 		</div>
@@ -62,3 +62,32 @@
 	<button type="button" data-dismiss="modal" class="btn btn-dark">Close</button>
 </div>
 </form>
+
+<script type="text/javascript">
+    $('#login-form').on('submit', function (e) {
+        e.preventDefault();
+        var formData = $('#login-form').serializeArray();
+        var url = $('#login-form').attr('action');
+        var $modalRegister = $('#ajaxRegisterModal');
+        var $modal = $('#ajaxLoginModal');
+        $.ajax({
+            type: "post",
+            url: url,
+            data: formData,
+            contentType: "application/x-www-form-urlencoded",
+            success: function (responseData, textStatus, jqXHR) {
+                $('#login-errors').html('<p style="color: green;">Logged In Successful.</p>');
+        	$modalRegister.modal('hide');
+                $modal.modal('hide');
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $('#login-errors').html('<p style="color: red;">' + errorThrown + '</p>');
+                if (textStatus == 422) {
+                    $.each(jqXHR.responseJSON.errors, function (k, v) {
+                        $('#login-errors').append('<p style="color: red;">' + v[0] + '</p>');
+                    });
+                }
+            }
+        });
+    });
+</script>

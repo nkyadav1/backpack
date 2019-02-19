@@ -41,6 +41,9 @@ Route::get('user/register', function () {
     return view('ajax-login-modal-register');
 });
 
+Route::post('user/register/save','Auth\RegisterController@initRegister');
+Route::post('user/login','Auth\LoginController@initLogin');
+
 Route::get('user/login', function () {
     return view('ajax-login-modal-login');
 });
@@ -58,6 +61,5 @@ Route::group([
 });
 
 
-Auth::routes();
 
 //Route::get('/', 'HomeController@index')->name('home');

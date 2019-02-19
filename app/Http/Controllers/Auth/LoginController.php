@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -36,4 +38,17 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    
+    
+    public function initLogin(Request $request){
+        $params = $request->all();
+        $userData = \App\User::where('email',$params['email'])->get(['email','mobile','name','password']);
+        if($userData->isEmpty()){
+            return response()->json(['message'=>'No User Found.'])->setStatusCode(401,"User Not Found.");
+        } else if($userData[0]->password!=(Hash::make($params['password']))){
+            return response()->json(['message'=>'Invalid Credentinals.'])->setStatusCode(401,"Please enter correct password.");
+        }
+        $request->flashExcept('password');
+        return response()->json(['message'=>'Successfully Loggged In.'])->setStatusCode(200,"OK");
+    }    
 }
