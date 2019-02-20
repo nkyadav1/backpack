@@ -77,8 +77,9 @@
             contentType: "application/x-www-form-urlencoded",
             success: function (responseData, textStatus, jqXHR) {
                 $('#login-errors').html('<p style="color: green;">Logged In Successful.</p>');
-        	$modalRegister.modal('hide');
+                $modalRegister.modal('hide');
                 $modal.modal('hide');
+                window.location.reload();
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 $('#login-errors').html('<p style="color: red;">' + errorThrown + '</p>');

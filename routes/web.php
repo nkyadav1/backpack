@@ -42,7 +42,8 @@ Route::get('user/register', function () {
 });
 
 Route::post('user/register/save','Auth\RegisterController@initRegister');
-Route::post('user/login','Auth\LoginController@initLogin');
+Route::post('user/login','Auth\LoginController@authenticate');
+Route::get('user/logout','Auth\LoginController@logout');
 
 Route::get('user/login', function () {
     return view('ajax-login-modal-login');

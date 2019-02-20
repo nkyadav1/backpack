@@ -78,6 +78,29 @@
                             <div class="navbar-mini">
                                 <ul class="clearfix">
                                     <li><a href="tel:6376470147"><i class="fa fa-phone-square green">&nbsp;</i>6376 470 147</a></li>
+                                    <li id="profile-menu" class="dropdown dropdown-user {{(Auth::check()?'':'hidden')}}" >
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="true">
+<!--                                    <img alt="" class="img-circle" src="../assets/layouts/layout/img/avatar3_small.jpg">-->
+                                    <span class="username username-hide-on-mobile"> {{ (Auth::check())?Auth::user()->name:'Guest' }}</span>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="{{url('/user/profile')}}">
+                                            <i class="icon-user"></i> My Profile </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{url('/user/orders')}}">
+                                            <i class="icon-envelope-open"></i> My Bookings
+                                        </a>
+                                    </li>
+                                    <li class="divider"> </li>
+                                    <li>
+                                        <a href="{{url('/user/logout')}}">
+                                            <i class="icon-key"></i> Log Out </a>
+                                    </li>
+                                </ul>
+                            </li>
 <!--                                    <li class="dropdown bt-dropdown-click">
                                         <a id="city-dropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                             <i class="ion-android-globe"></i><span id="selected-city">Neemuch</span>
@@ -89,11 +112,12 @@
                                             <li><a href="javascript:setCity('Udaipur');">Udaipur</a></li>
                                         </ul>
                                     </li>-->
-                                    <li class="user-action">
+                                    <li id="signup-button" class="user-action {{(Auth::check()?'hidden':'')}}">
                                         <a href="javascript:void(0)" class="btn btn-primary btn-inverse btn-sm btn-ajax-login" data-toggle="modal">Sign up/in</a>
                                     </li>
                                 </ul>
                             </div>
+                            
 
                         </div>
 
