@@ -31,17 +31,17 @@
 
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 
-                <!--						<div class="notify-box">
+                						<div id="notify-box" class="notify-box hidden">
                                                                 
-                                                                        <div class="notify-inner">
+                                                                        <div id="notify-box-content" class="notify-inner">
                                                                                 
-                                                                                <p> If you don’t have an account you can create one below by entering your email address/username. Your account details will be confirmed via email.</p>
+<!--                                                                                <p> If you don’t have an account you can create one below by entering your email address/username. Your account details will be confirmed via email.</p>
                                                                                 
-                                                                                <a href="#" class="btn btn-primary btn-sm btn-absolute">Sign-up</a>
+                                                                                <a href="#" class="btn btn-primary btn-sm btn-absolute">Sign-up</a>-->
                                                                                 
                                                                         </div>
                                                                 
-                                                                </div>-->
+                                                                </div>
 
                 <div class="submite-list-wrapper">
 
@@ -62,10 +62,9 @@
                     </div>
 
                     <div class="submite-list-box">
-                        <form id="register-basic-details" name="restaurant-list-form" action="{{url('/restaurant/basic/save')}}" method="post">
+                        <form id="restaurant-basic-details" name="restaurant-list-form" action="{{url('/restaurant/basic/save')}}" method="post">
                             @csrf
                             <div class="row ga-20">
-
                                 <div class="col-xs-12 col-sm-12">									
                                     <div class="form-group form-group-lg">										
                                         <label>Restaurant name:</label>
@@ -83,7 +82,7 @@
                                 <div class="col-xs-12 col-sm-12">												
                                     <div class="form-group">
                                         <label>Cuisine</label>
-                                        <input type="text" class="form-control" id="autocompleteTagging" value="North Indian" id="restaurant-cusisines" name="cusines" placeholder="Type to add Cuisines"  required="required"/>
+                                        <input type="text" class="form-control" id="autocompleteTagging" value="North Indian" id="restaurant-cusisines" name="cuisine" placeholder="Type to add Cuisines"  required="required"/>
                                     </div>										
                                 </div>									
                             </div>
@@ -154,7 +153,7 @@
                                 </div>									
                                 <div class="col-xss-12 col-xs-6 col-sm-3">												
                                     <div class="form-group">                                                                                    <label><i class="fa fa-phone-square">&nbsp;</i>Primary Phone</label>
-                                        <input type="tel" minlength="10" maxlength="10" class="form-control" name="phone1" required="required" placeholder="Enter 10 Digit phone number"/>										
+                                        <input type="tel" minlength="10" maxlength="10" class="form-control" name="phone" required="required" placeholder="Enter 10 Digit phone number"/>										
                                     </div>
                                 </div>
 
@@ -209,7 +208,7 @@
                                 <div class="opening-hours-box">
 
                                     <div class="row gap-20">
-                                        <input type="hidden" name="restaurant_id" value="" required=""/>
+                                        <input type="hidden" name="id" class="restaurant-id" value="" required=""/>
                                         <div class="col-xs-12 col-sm-6 col-md-6">
 
                                             <label class="day-name">Monday</label>
@@ -220,7 +219,7 @@
 
                                                     <div class="input-group from mb-15">
                                                         <span class="input-group-addon">from</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-from[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_from[]">
                                                     </div>
 
                                                 </div>
@@ -229,7 +228,7 @@
 
                                                     <div class="input-group to mb-15">
                                                         <span class="input-group-addon">to</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-to[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_to[]">
                                                     </div>
 
                                                 </div>
@@ -248,7 +247,7 @@
 
                                                     <div class="input-group from mb-15">
                                                         <span class="input-group-addon">from</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-from[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_from[]">
                                                     </div>
 
                                                 </div>
@@ -257,7 +256,7 @@
 
                                                     <div class="input-group to mb-15">
                                                         <span class="input-group-addon">to</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-to[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_to[]">
                                                     </div>
 
                                                 </div>
@@ -276,7 +275,7 @@
 
                                                     <div class="input-group from mb-15">
                                                         <span class="input-group-addon">from</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-from[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_from[]">
                                                     </div>
 
                                                 </div>
@@ -285,7 +284,7 @@
 
                                                     <div class="input-group to mb-15">
                                                         <span class="input-group-addon">to</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-to[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_to[]">
                                                     </div>
 
                                                 </div>
@@ -304,7 +303,7 @@
 
                                                     <div class="input-group from mb-15">
                                                         <span class="input-group-addon">from</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-from[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_from[]">
                                                     </div>
 
                                                 </div>
@@ -313,7 +312,7 @@
 
                                                     <div class="input-group to mb-15">
                                                         <span class="input-group-addon">to</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-to[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_to[]">
                                                     </div>
 
                                                 </div>
@@ -332,7 +331,7 @@
 
                                                     <div class="input-group from mb-15">
                                                         <span class="input-group-addon">from</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-from[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_from[]">
                                                     </div>
 
                                                 </div>
@@ -341,7 +340,7 @@
 
                                                     <div class="input-group to mb-15">
                                                         <span class="input-group-addon">to</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-to[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_to[]">
                                                     </div>
 
                                                 </div>
@@ -360,7 +359,7 @@
 
                                                     <div class="input-group from mb-15">
                                                         <span class="input-group-addon">from</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-from[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_from[]">
                                                     </div>
 
                                                 </div>
@@ -369,7 +368,7 @@
 
                                                     <div class="input-group to mb-15">
                                                         <span class="input-group-addon">to</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-to[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_to[]">
                                                     </div>
 
                                                 </div>
@@ -388,7 +387,7 @@
 
                                                     <div class="input-group from mb-15">
                                                         <span class="input-group-addon">from</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-from[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_from[]">
                                                     </div>
 
                                                 </div>
@@ -397,7 +396,7 @@
 
                                                     <div class="input-group to mb-15">
                                                         <span class="input-group-addon">to</span>
-                                                        <input class="oh-timepicker form-control" type="text" name="open-hour-to[]">
+                                                        <input class="oh-timepicker form-control" type="text" name="open_hour_to[]">
                                                     </div>
 
                                                 </div>
@@ -407,7 +406,7 @@
                                         </div>
 
                                     </div>
-
+                                    <button type="submit" class="btn btn-success" >Save and Continue</button>
                                 </div>
                             </form>
                         </div>
@@ -460,7 +459,7 @@
 <form id="restaurant-features" name="restaurant-features" action="{{url('/restaurant/features/save')}}" method="post">
     @csrf
                         <div class="row gap-20">
-
+                            <input type="hidden" name="id" class="restaurant-id" value="" required=""/>
                             <div class="col-xs-12 col-sm-4">
 
                                 <label>Good For</label>
@@ -573,6 +572,7 @@
                             </div>                           
 
                         </div>
+    <button type="submit" class="btn btn-success" >Save and Continue</button>
 </form>
                     </div>
 
@@ -898,6 +898,88 @@
     </div>
 
 </div>
+<script type="text/javascript">    
+    $('#restaurant-basic-details').on('submit', function (e) {
+        e.preventDefault();
+        $('#notify-box').addClass('hidden');
+        var formData = $('#restaurant-basic-details').serializeArray();
+        var url = $('#restaurant-basic-details').attr('action');
+        
+        $.ajax({
+            type: "post",
+            url: url,
+            data: formData,
+            contentType: "application/x-www-form-urlencoded",
+            success: function (responseData, textStatus, jqXHR) {
+                $('#notify-box-content').html('<p style="color: green;">Restaurant Registered Successfully.<br> Add more information userful to customer.</p>');
+                $('#notify-box').removeClass('hidden');
+                $('.restaurant-id').val(responseData.id);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $('#notify-box-content').html('<p style="color: red;">' + errorThrown + '</p>');
+                if (textStatus == 422) {
+                    $.each(jqXHR.responseJSON.errors, function (k, v) {
+                        $('#notify-box-content').append('<p style="color: red;">' + v[0] + '</p>');
+                    });                    
+                }
+                $('#notify-box').removeClass('hidden');
+            }
+        });
+    });
+    
+    $('#restaurant-timings').on('submit', function (e) {
+        e.preventDefault();
+        $('#notify-box').html('').addClass('hidden');
+        var formData = $('#restaurant-timings').serializeArray();
+        var url = $('#restaurant-timings').attr('action');        
+        $.ajax({
+            type: "post",
+            url: url,
+            data: formData,
+            contentType: "application/x-www-form-urlencoded",
+            success: function (responseData, textStatus, jqXHR) {
+                $('#notify-box-content').html('<p style="color: green;">Restaurant Registered Successfully.<br> Add more information userful to customer.</p>');
+                $('#notify-box').removeClass('hidden');
+                $('.restaurant-id').val(responseData.id);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $('#notify-box-content').html('<p style="color: red;">' + errorThrown + '</p>');
+                if (textStatus == 422) {
+                    $.each(jqXHR.responseJSON.errors, function (k, v) {
+                        $('#notify-box-content').append('<p style="color: red;">' + v[0] + '</p>');
+                    });
+                }
+                $('#notify-box').removeClass('hidden');
+            }
+        });
+    });
+    $('#restaurant-features').on('submit', function (e) {
+        e.preventDefault();
+        $('#notify-box').html('').addClass('hidden');
+        var formData = $('#restaurant-features').serializeArray();
+        var url = $('#restaurant-features').attr('action');        
+        $.ajax({
+            type: "post",
+            url: url,
+            data: formData,
+            contentType: "application/x-www-form-urlencoded",
+            success: function (responseData, textStatus, jqXHR) {
+                $('#notify-box-content').html('<p style="color: green;">Restaurant Registered Successfully.<br> Add more information userful to customer.</p>');
+                $('#notify-box').removeClass('hidden');
+                $('.restaurant-id').val(responseData.id);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $('#notify-box-content').html('<p style="color: red;">' + errorThrown + '</p>');
+                if (textStatus == 422) {
+                    $.each(jqXHR.responseJSON.errors, function (k, v) {
+                        $('#notify-box-content').append('<p style="color: red;">' + v[0] + '</p>');
+                    });
+                }
+                $('#notify-box').removeClass('hidden');
+            }
+        });
+    });
+</script>
 
 <!-- JS for only submission page -->
 <script type="text/javascript" src="{{url('/')}}/js/bootstrap3-wysihtml5.min.js"></script>

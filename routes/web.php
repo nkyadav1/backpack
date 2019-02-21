@@ -59,6 +59,8 @@ Route::group([
     'namespace' => 'Api',
         ], function () {
     Route::get('restaurant/{id}', 'RestaurantController@detailView'); 
+    Route::post('restaurant/basic/save', 'RestaurantController@addBasicDetails');
+    Route::post('restaurant/timings/save', 'RestaurantController@addRestaurantTiming');
 });
 
 

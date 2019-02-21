@@ -50,4 +50,22 @@ class RestaurantController extends Controller
         $data = $this->show($id);
         return view('restaurant-detail')->with('data',$data);
     }
+    /**
+     * 
+     * @param Request $request
+     */
+    public function addBasicDetails(Request $request){
+        $data = $request->all();
+        unset($data['_token']);
+        unset($data['_wysihtml5_mode']);
+        $result = Restaurant::create($data);
+        return $result;
+    }
+    public function addRestaurantTiming(Request $request){
+        $data = $request->all();
+        unset($data['_token']);
+        unset($data['_wysihtml5_mode']);
+        $result = Restaurant::find($data['id'])->update($data);
+        return $result;
+    }
 }
