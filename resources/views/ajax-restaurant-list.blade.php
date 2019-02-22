@@ -69,8 +69,8 @@
             <nav>
                 <ul class="pagination pagination-text-center-sm mb-5-xs">
                     <li>
-                        <a href="{{$results['prev_page_url']}}" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
+                        <a href="javascript:loadRestaurantList('{{$results['prev_page_url']}}');" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;&nbsp;Prev</span>
                         </a>
                     </li>
                     <li class="active"><a href="#">{{$results['current_page']}}</a></li>
@@ -79,8 +79,8 @@
                     <li><a href="#">4</a></li>
                     <li><a href="#">5</a></li>-->
                     <li>
-                        <a href="{{$results['next_page_url']}}" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
+                        <a href="javascript:loadRestaurantList('{{$results['next_page_url']}}');" aria-label="Next">
+                            <span aria-hidden="true">&raquo;&nbsp; Next</span>
                         </a>
                     </li>
                 </ul>

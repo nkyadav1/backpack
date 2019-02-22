@@ -61,8 +61,7 @@ Route::group([
     Route::get('restaurant/{id}', 'RestaurantController@detailView'); 
     Route::post('restaurant/basic/save', 'RestaurantController@addBasicDetails');
     Route::post('restaurant/timings/save', 'RestaurantController@addRestaurantTiming');
+    Route::post('restaurant/features/save', 'RestaurantController@addRestaurantFeatures');
+    Route::post('upload', 'RestaurantController@uploadFeatureImage');
 });
-
-
-
 //Route::get('/', 'HomeController@index')->name('home');

@@ -415,13 +415,16 @@ function simpleAjaxCall(url,data,method='post',contenttype='application/x-www-fo
         });
 }
 
-function loadRestaurantList(){
+function loadRestaurantList(url=base_url+'/api/restaurants/list'){
     	/** for Restaurant list view */
+        if(url==null){
+            return;
+        }
+        $('body').modalmanager('loading');
 	var $restaurantContainer = $('#restaurant-list-wrapper');
 		$('#restaurant-list-wrapper').modalmanager('loading');
-                setTimeout(function(){
-			 $restaurantContainer.load(base_url+'/api/restaurants/list', '', function(){
+                $restaurantContainer.load(url, '', function(){
     				//$modalRegister.modal();
 			});
-		}, 1000);    
+		
 }
