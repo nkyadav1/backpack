@@ -17,7 +17,7 @@
 									<div class="detail-header">
 										<div class="detail-header-inner">
 											<h3>{{$data->name}}</h3>
-											<p class="location"><i class="fa fa-map-marker"></i> {{$data->address}}</p>
+                                                                                        <p class="location"><i class="fa fa-map-marker"></i> {{$data->street1}}<br/>{{$data->street2}}</p>
 											<div class="rating-wrapper">
 												<div class="rating-item">
 													<input type="hidden" class="rating" data-filled="oi oi-star" data-empty="oi oi-star" data-fractions="2" data-readonly value="{{$data->rating}}"/>
@@ -130,7 +130,7 @@
 													</div>
 													
 													<div class="content">
-														<p>{{$data->address}} <br/>{{$data->adr_line2}} </p>
+														<p>{{$data->street1}} <br/>{{$data->street2}}<br/>{{$data->city}}, {{$data->state}} - {{$data->pincode}} </p>
 													</div>
 													
 												</li>
@@ -142,7 +142,7 @@
 													</div>
 													
 													<div class="content">
-														<p>{{$data->phone}} <br/>{{$data->mobile}}</p>
+														<p> {{$data->phone}} <br/>&nbsp;{{$data->phone2}}</p>
 													</div>
 													
 												</li>
@@ -154,14 +154,14 @@
 													</div>
 													
 													<div class="content">
-														<p>{{$data->email}}<br/>{{$data->email1}}</p>
+														<p>{{$data->email1}}<br/>{{$data->email2}}</p>
 													</div>
 													
 												</li>
 												
 											</ul>
 										
-											<a href="#detail-content-sticky-nav-04" class="btn btn-primary btn-sm anchor-alt">See map &amp; get route</a>
+<!--											<a href="#detail-content-sticky-nav-04" class="btn btn-primary btn-sm anchor-alt">See map &amp; get route</a>-->
 										</div>
 										
 									</div>
@@ -186,7 +186,7 @@
 														
 														<div class="col-xs-6 col-sm-6">
 															<span class="time">
-																10:00 am - 10:00 pm
+																{{$data->open_hour_from[0]}}  - {{$data->open_hour_to[0]}}
 															</span>
 														</div>
 														
@@ -206,7 +206,7 @@
 														
 														<div class="col-xs-6 col-sm-6">
 															<span class="time">
-																10:00 am - 10:00 pm
+																{{$data->open_hour_from[1]}}  - {{$data->open_hour_to[1]}}
 															</span>
 														</div>
 														
@@ -226,7 +226,7 @@
 														
 														<div class="col-xs-6 col-sm-6">
 															<span class="time">
-																10:00 am - 10:00 pm
+																{{$data->open_hour_from[2]}}  - {{$data->open_hour_to[2]}}
 															</span>
 														</div>
 														
@@ -246,7 +246,7 @@
 														
 														<div class="col-xs-6 col-sm-6">
 															<span class="time">
-																10:00 am - 10:00 pm
+																{{$data->open_hour_from[3]}}  - {{$data->open_hour_to[3]}}
 															</span>
 														</div>
 														
@@ -266,7 +266,7 @@
 														
 														<div class="col-xs-6 col-sm-6">
 															<span class="time">
-																09:00 am - 12:00 pm
+																{{$data->open_hour_from[4]}}  - {{$data->open_hour_to[4]}}
 															</span>
 														</div>
 														
@@ -286,7 +286,7 @@
 														
 														<div class="col-xs-6 col-sm-6">
 															<span class="time">
-																09:00 am - 12:00 pm
+																{{$data->open_hour_from[5]}}  - {{$data->open_hour_to[5]}}
 															</span>
 														</div>
 														
@@ -306,7 +306,7 @@
 														
 														<div class="col-xs-6 col-sm-6">
 															<span class="time text-uppercase font700 spacing-2">
-																Close
+																{{$data->open_hour_from[6]}}  - {{$data->open_hour_to[6]}}
 															</span>
 														</div>
 														
@@ -328,28 +328,28 @@
 								
 									<div class="col-xss-12 col-xs-6 col-sm-6 col-md-3 mb-15">
 										<h6 class="mb-5">Good for</h6>
-										<p>- Drink <br>- People watching</p>
+										<p>-&nbsp;{{isset($data->good_for[0])?$data->good_for[0]:''}} <br>-&nbsp;{{isset($data->good_for[1])?$data->good_for[1]:''}} <br>-&nbsp;{{isset($data->good_for[2])?$data->good_for[2]:''}} <br>-&nbsp;{{isset($data->good_for[3])?$data->good_for[3]:''}}</p>
 									</div>	
 									
 									<div class="col-xss-12 col-xs-6 col-sm-6 col-md-3 mb-15">
 										<h6 class="mb-5">Feature</h6>
-										<p>- Outdoor seating <br>- 47" digital HDTV</p>
+										<p>-&nbsp;{{isset($data->feature[0])?$data->feature[0]:''}} <br>-&nbsp;{{isset($data->feature[1])?$data->feature[1]:''}} <br>-&nbsp;{{isset($data->feature[2])?$data->feature[2]:''}} <br>-&nbsp;{{isset($data->feature[3])?$data->feature[3]:''}}</p>
 									</div>
 									
 									<div class="col-xss-12 col-xs-6 col-sm-6 col-md-3 mb-15">
 										<h6 class="mb-5">Food &amp; Drink</h6>
-										<p>- Breakfast, Lunch, and Dinner <br>- Take-out</p>
+										<p>-&nbsp;{{isset($data->food[0])?$data->food[0]:''}} <br>-&nbsp;{{isset($data->food[1])?$data->food[1]:''}} <br>-&nbsp;{{isset($data->food[2])?$data->food[2]:''}} <br>-&nbsp;{{isset($data->food[3])?$data->food[3]:''}}</p>
 									</div>
-									
+<!--									
 									<div class="col-xss-12 col-xs-6 col-sm-6 col-md-3 mb-15">
 										<h6 class="mb-5">Higtlight</h6>
 										<p>- Creamy Pasta Carbonara <br>- Dutch Indonesian Chicken</p>
-									</div>
+									</div>-->
 									
-									<div class="col-xss-12 col-xs-12 col-sm-12 col-md-12 mb-15">
+<!--									<div class="col-xss-12 col-xs-12 col-sm-12 col-md-12 mb-15">
 										<h6 class="mb-5">Payment accepted</h6>
 										<p>- Visa, Master card, American Express, UnionPay</p>
-									</div>
+									</div>-->
 									
 								</div>
 
@@ -1208,7 +1208,7 @@
 
 							</div>
 							
-							<div id="detail-content-sticky-nav-04" class="detail-content-section clearfix">
+							<div id="detail-content-sticky-nav-04" class="detail-content-section clearfix hidden">
 							
 								<div class="section-title-02">
 									<h3><span>Location</span></h3>
@@ -1270,56 +1270,53 @@
 							
 							<div class="form-wrapper">
 							
-								<form>
+                                                            <form action="{{url('/')}}/order/book" id="reserve-table" name="reserve-table" method="post">
 								
 									<div class="row">
-									
+                                                                            @csrf
 										<div class="col-xs-12 col-sm-12">
-										
+                                                                                    <div  id="reserve-errors" class="input-group mb-15">
+												
+                                                                                    </div>
+                                                                                    <input type="hidden" placeholder="Restaurant id" name="restaurant_id" value="{{$data->id}}" class="form-control" required="required"/>
+                                                                                    <input type="hidden" placeholder="Restaurant id" name="restaurant_name" value="{{$data->name}}" class="form-control" required="required"/>
 											<div class="input-group mb-15">
 												<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-												<input type="text" placeholder="Full Name" class="form-control" />
+                                                                                                <input type="text" placeholder="Full Name" name="customername" value="{{(Auth::check())?Auth::user()->name:''}}" class="form-control" required="required"/>
 											</div>
 											
 											<div class="input-group mb-15">
 												<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-												<input type="email" placeholder="Email Address" class="form-control" />
+												<input type="email" placeholder="Email Address" name="email" value="{{(Auth::check())?Auth::user()->email:'' }}" class="form-control" required="required" />
 											</div>
 											
 											<div class="input-group mb-15">
 												<span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-												<input type="text" placeholder="Phone Number" class="form-control" />
+												<input type="text" placeholder="Phone Number" name="mobile" value="{{(Auth::check())?Auth::user()->mobile:'' }}" class="form-control" required="required" />
 											</div>
 											
 											<div class="input-group mb-15">
 												<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-												<input type="text" placeholder="dd/mm/yyyy" class="form-control" />
+												<input type="date" placeholder="dd/mm/yyyy" name="dine_date" class="form-control" required="required" />
 											</div>
 											
 											<div class="row gap-15">
 											
-												<div class="col-xs-6 col-sm-6">
-												
+												<div class="col-xs-6 col-sm-6">												
 													<div class="input-group mb-15">
 														<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-														<input type="text" placeholder="hh-mm" class="form-control" />
-													</div>
-													
-												</div>
-												
-												<div class="col-xs-6 col-sm-6">
-												
+														<input type="time" placeholder="hh-mm" name="dine_time_from" class="form-control" required="required" />
+													</div>													
+												</div>												
+												<div class="col-xs-6 col-sm-6">												
 													<div class="input-group mb-15">
 														<span class="input-group-addon"><i class="fa fa-male"></i></span>
-														<input type="text" placeholder="hh-mm" class="form-control" />
-													</div>
-													
-												</div>
-												
-											</div>
-											
+                                                                                                                 <input type="time" placeholder="hh-mm" name="dine_time_to" class="form-control" required="required" />
+													</div>													
+												</div>												
+											</div>											
 											<div class="text-center">
-												<button class="btn btn-primary btn-block">Reserve now</button>
+                                                                                            <button type="submit" class="btn btn-primary btn-block">Reserve now</button>
 											</div>
 									
 										</div>
@@ -1340,10 +1337,10 @@
 							
 							<div class="content">
 								<h5>Call for reservation</h5>
-								<p>Every day except Sunday from 10am to 8 pm</p>
+<!--								<p>Every day except Sunday from 10am to 8 pm</p>-->
 								<p class="phone-number">
 									<span class="font-italic text-muted">Reservation number: </span>
-									<span class="number">+66-85-658-8754</span>
+                                                                        <span class="number">{{$data->phone}}<br/>{{$data->phone2}}</span>
 								</p>
 							</div>
 
@@ -1468,4 +1465,33 @@
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="{{url('/')}}/js/infobox.js"></script>
 <script type="text/javascript" src="{{url('/')}}/js/customs-detail.js"></script>
+<script type="text/javascript">
+    $('#reserve-table').on('submit', function (e) {
+        e.preventDefault();
+        var formData = $('#reserve-table').serializeArray();
+        var url = $('#reserve-table').attr('action');
+        
+        $.ajax({
+            type: "post",
+            url: url,
+            data: formData,
+            contentType: "application/x-www-form-urlencoded",
+            success: function (responseData, textStatus, jqXHR) {
+                alert('Your booking is Successful.');
+//                $('#login-errors').html('<p style="color: green;">Logged In Successful.</p>');
+//                $modalRegister.modal('hide');
+//                $modal.modal('hide');
+                window.location.reload();
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $('#reserve-errors').html('<p style="color: red;">' + errorThrown + '</p>');
+                if (textStatus == 422) {
+                    $.each(jqXHR.responseJSON.errors, function (k, v) {
+                        $('#reserve-errors').append('<p style="color: red;">' + v[0] + '</p>');
+                    });
+                }
+            }
+        });
+    });
+</script>
 @include('footer')

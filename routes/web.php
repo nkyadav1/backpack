@@ -63,5 +63,7 @@ Route::group([
     Route::post('restaurant/timings/save', 'RestaurantController@addRestaurantTiming');
     Route::post('restaurant/features/save', 'RestaurantController@addRestaurantFeatures');
     Route::post('upload', 'RestaurantController@uploadFeatureImage');
+    
+    Route::post('order/book', 'OrderController@bookTable');
 });
 //Route::get('/', 'HomeController@index')->name('home');
