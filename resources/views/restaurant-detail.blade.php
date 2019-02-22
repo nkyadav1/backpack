@@ -1305,13 +1305,13 @@
 												<div class="col-xs-6 col-sm-6">												
 													<div class="input-group mb-15">
 														<span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
-														<input type="time" placeholder="hh-mm" name="dine_time_from" class="form-control" required="required" />
+														<input type="time" placeholder="hh-mm" name="dinetime" class="form-control" required="required" />
 													</div>													
 												</div>												
 												<div class="col-xs-6 col-sm-6">												
 													<div class="input-group mb-15">
 														<span class="input-group-addon"><i class="fa fa-male"></i></span>
-                                                                                                                 <input type="time" placeholder="hh-mm" name="dine_time_to" class="form-control" required="required" />
+                                                                                                                <input type="integer" placeholder="People Count" min="1" name="guests" class="form-control" required="required" />
 													</div>													
 												</div>												
 											</div>											

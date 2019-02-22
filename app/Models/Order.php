@@ -19,7 +19,7 @@ class Order extends Model
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     // protected $guarded = ['id'];
-    protected $fillable = [];
+    protected $fillable = ['customername','restaurant_name','restaurant_id','dine_date','dinetime','guests'];
     // protected $hidden = [];
     // protected $dates = [];
 
