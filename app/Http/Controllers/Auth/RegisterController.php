@@ -78,6 +78,6 @@ class RegisterController extends Controller
         $dataArray = $request->all();
         $validationResult = $this->validator($dataArray)->validate();
         $result = $this->create($dataArray);
-        dd($result);
+        return $result;
     }
 }

@@ -23,6 +23,7 @@
         <link href="{{url('/')}}/css/animate.css" rel="stylesheet">
         <link href="{{url('/')}}/css/main.css" rel="stylesheet">
         <link href="{{url('/')}}/css/component.css" rel="stylesheet">
+        <link href="{{url('/')}}/pnotify/pnotify.custom.min.css" rel="stylesheet">
 
         <!-- CSS Custom -->
         <link href="{{url('/')}}/css/style.css" rel="stylesheet">

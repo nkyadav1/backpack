@@ -63,7 +63,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="login-box-box-action">
-                    Already have account? <a data-toggle="modal" href="#loginModal">Log-in</a>
+                    Already have account? <a id="ajax-login-link" data-toggle="modal" href="#loginModal">Log-in</a>
                 </div>
             </div>
 
@@ -89,17 +89,23 @@
             data: formData,
             contentType: "application/x-www-form-urlencoded",
             success: function (responseData, textStatus, jqXHR) {
-                $('#register-errors').html('<p style="color: green;">Registration Successful.</p>');
-        	$modalRegister.modal('hide');
+                //$('#register-errors').html('<p style="color: green;">Registration Successful.</p>');
+                notice('You have Succesfully Registered');
+                $modalRegister.modal('hide');
                 $modal.modal('hide');
+                $modal.modal();
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 $('#register-errors').html('<p style="color: red;">' + errorThrown + '</p>');
-                if (textStatus == 422) {
+                var errorMessage = errorThrown;
+                if (jqXHR.status == 422) {
                     $.each(jqXHR.responseJSON.errors, function (k, v) {
-                        $('#register-errors').append('<p style="color: red;">' + v[0] + '</p>');
+                       errorMessage+='\n'+v[0];
                     });
+                } else {
+                  console.log('We did not entered loop as textStatus='+textStatus);  
                 }
+                notice(errorMessage,'error');
             }
         });
     });

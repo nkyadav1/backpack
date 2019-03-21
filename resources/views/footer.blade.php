@@ -167,6 +167,7 @@
         <script type="text/javascript" src="{{url('/')}}/js/select2.full.js"></script>
         <script type="text/javascript" src="{{url('/')}}/js/slick.min.js"></script>
         <script type="text/javascript" src="{{url('/')}}/js/jquery.placeholder.min.js"></script>
+        <script type="text/javascript" src="{{url('/')}}/pnotify/pnotify.custom.min.js"></script>
         <script type="text/javascript" src="{{url('/')}}/js/ion.rangeSlider.min.js"></script>
         <script type="text/javascript" src="{{url('/')}}/js/readmore.min.js"></script>
         <script type="text/javascript" src="{{url('/')}}/js/bootstrap-modalmanager.js"></script>

@@ -77,17 +77,21 @@
             contentType: "application/x-www-form-urlencoded",
             success: function (responseData, textStatus, jqXHR) {
                 $('#login-errors').html('<p style="color: green;">Logged In Successful.</p>');
+                notice('You have succesfully Logged In.');
                 $modalRegister.modal('hide');
                 $modal.modal('hide');
                 window.location.reload();
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 $('#login-errors').html('<p style="color: red;">' + errorThrown + '</p>');
-                if (textStatus == 422) {
+                var errorMessage = errorThrown;
+                if (jqXHR.status == 422) {
                     $.each(jqXHR.responseJSON.errors, function (k, v) {
+                        errorMessage+='\n'+v[0];
                         $('#login-errors').append('<p style="color: red;">' + v[0] + '</p>');
                     });
                 }
+                notice(errorMessage,'error');
             }
         });
     });
